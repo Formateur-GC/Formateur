@@ -100,7 +100,40 @@
       font-weight: bold;
     }
 
-  
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-right {
+  display: flex;
+  gap: 12px;
+}
+
+.cert-mini img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.cert-mini img:hover {
+  transform: scale(1.1);
+}
+    @media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-right {
+    margin-top: 15px;
+  }
+}
   </style>
 </head>
 
@@ -109,15 +142,37 @@
   <div class="container">
 
     <!-- HEADER -->
-    <header>
-      <h1>Guillaume Comte</h1>
-      <div class="subtitle">
-        Formateur en numérique et en IA (FR/EN), Mauguio
-      </div>
-      <div class="contact">
-        📧 <a href="mailto:contact@gcomtejecco.fr">contact@gcomtejecco.fr</a>
-      </div>
-    </header>
+   <header class="header">
+
+  <div class="header-left">
+    <h1>XX YY</h1>
+    <div class="subtitle">Formateur en numérique et en IA (Fr/En), Mauguio </div>
+    <div class="contact">
+      📧 <a href="mailto:contact@gcomtejecco.fr">contact@gcomtejecco.fr</a>
+    </div>
+  </div>
+
+  <div class="header-right">
+
+    <a href="URL_CERT_QUALIOPI"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="cert-mini">
+
+      <img src="assets/qualiopi.png" alt="Qualiopi 2025-2028">
+    </a>
+
+    <a href="URL_CERT_ANGLAIS"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="cert-mini">
+
+      <img src="assets/english.png" alt="Certification anglais">
+    </a>
+
+  </div>
+
+</header>
 
     <!-- PITCH -->
     <section id="presentation">
